@@ -41,6 +41,15 @@ def main():
         # decrements to the previous 
         else:
             k -= 1
+            
+    # last review in case for odd lists and the previous last 'while' cycle where TRUE
+    if j == k and n % 2 == 1:
+        if intList[j]+intList[j-1] == num:
+            print(str(intList[j-1]), str(intList[j]))
+            results = True
+        elif intList[j]+intList[j+1] == num:
+            print(str(intList[j]), str(intList[j+1]))
+            results = True
     
     # Message to print if there's no tuple that sums the number to compare with
     if not results:
